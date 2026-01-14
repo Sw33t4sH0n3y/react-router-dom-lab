@@ -1,8 +1,6 @@
 import { Link } from 'react-router';
 
 const NavBar = () => {
-// src/components/NavBar/NavBar.jsx
-
   return (
     <nav>
       <ul>
@@ -14,6 +12,9 @@ const NavBar = () => {
         </li>
         <li>
           <Link to="/new-mailbox">New Mailbox</Link>
+        </li>
+        <li>
+          <Link to="/new-letter">New Letter</Link>
         </li>
       </ul>
     </nav>

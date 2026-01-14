@@ -1,42 +1,315 @@
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+--pink:#ff9ec4;
+--light-pink:#ffe4f0;
+--purple: #c9a4f5;
+--light-purple: #f0e6ff;
+--blue: #a4d4f5;
+--light-blue: #e6f4ff;
+--yellow: #fff0a4;
+--mint: #a4f530;
+}
+
+h1 {
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 3rem;
+  color: #e75480;
+  text-align: center;
+  margin: 20px 0;
+  text-shadow: 2px 2px 0px var(--purple);
+}
+
+h1::before {
+  content: '🦄';
+}
+
+h1::after {
+  content: '🧸';
+}
+
+h2 {
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 2rem;
+  color: #9b59b6;
+  margin: 15px 0;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+nav {
+  background: linear-gradient(90deg, var(--pink), var(--purple), var(--blue));
+  padding: 15px 30px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 15px rgba(201, 164, 245, 0.4);
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+nav a {
+  text-decoration: none;
+  color: #5e2a6e;
+  font-weight: 700;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  transition: all 0.3 ease;
+  text-align: center;
+}
+
+nav a:hover {
+  background: white;
+  color: #e75480;
+  transform: scale(1.1);
+}
+
+nav a:before {
+  content: '✨';
+}
+
+main {
+  background: white;
+  border-radius: 30px;
+  padding: 30px;
+  max-width: 800px;
+  margin: 20px auto;
+  box-shadow: 0 8px 30px rgba(201, 164, 245, 0.3);
+  border: 3px dashed var(--pink);
+}
+
+.mailbox-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.mailbox-list a {
+  text-decoration: none;
+}
+
+.mail-box {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(145deg, var(--light-purple), var(--light-pink));
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--purple);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.mail-box::before {
+  content: '🧸';
+  font-size: 2rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.mail-box:hover {
+  transform: translateY(-10px) rotate(3deg);
+  box-shadow: 0 10px 25px rgba(201, 164, 245, 0.5);
+  border-color: var(--pink);
+}
+
+.mail-box h2 {
+  font-size: 1.2rem;
+  color: #9b59b6;
+  margin: 0;
+}
+
+.mail-box p {
+  color: #e75480;
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0;
+}
+
+label {
+  font-weight: 700;
+  color: #9b59b6;
+  font-size: 1.1rem;
+}
+
+label::before {
+  content: '🌸';
+}
+
+input,
+select, 
+textarea {
+  padding: 12px 18px;
+  border: 3px solid var(--purple);
+  border-radius: 15px;
+  font-size: 1rem;
+  font-family: 'Nunito', sans-serif;
+  background: var(--light-purple);
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--pink);
+  background: var(--light-pink);
+  box-shadow: 0 0 15px rgba(255, 158, 196, 0.4);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button {
+  background: linear-gradient(90deg, var(--pink), var(--purple));
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: 'Bubblegum Sans', cursive;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(201, 164, 245, 0.4);
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(231,84,128,0.5);
+}
+
+button::before {
+  content: '🦄';
+}
+
+button::after {
+  content: '💖';
+}
+
+dl {
+  background: var(--light-pink);
+  padding: 20px 30px;
+  border-radius: 20px;
+  border: 2px dashed var(--pink);
+  margin: 15px 0;
+}
+
+dt {
+  font-weight: 700;
+  color: #9b59b6; 
+  margin-top: 10px;
+}
+
+dt::before {
+  content: '💜';
+}
+
+dd {
+  color: #e75480;
+  font-size: 1.1rem;
+  margin-left: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: linear-gradient(145deg, var(--light-blue), var(--light-purple));
+  padding: 20px;
+  border-radius: 20px;
+  margin: 15px 0;
+  border: 2px solid var(--blue);
+  position: relative;
+}
+
+li::before {
+  content: '💌';
+  font-size: 1.5rem;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+}
+
+li p {
+  margin: 8px 0;
+  color: #555;
+}
+
+li strong {
+  color: #9b59b6;
+}
+
+main > p {
+  text-align: center;
+  color: #9b59b6;
+  font-size: 1.2rem;
+  padding: 30px;
+}
+
+main > p::before {
+  content: '🧸';
+}
+main > p::after {
+  content: '🦄';
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%; 
+  background-image: 
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50' x='10' font-size='40'>🦄</text></svg>"),
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50' x='10' font-size='40'>🧸</text></svg>");
+  background-size: 100px 100px, 100px 100px;
+  background-position: 0 0, 50px 50px;
+  background-repeat: repeat;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::after {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 3rem;
+  opacity: 0.5;
+
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-20px);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+::-webkit-scrollbar {
+  width: 12px;
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(var(--purple), var(--pink));
 }

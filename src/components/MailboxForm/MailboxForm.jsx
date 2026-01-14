@@ -35,7 +35,7 @@ const MailboxForm = (props) => {
                       value={formData.boxSize}
                       onChange={handleChange}
                       >
-                        <option value="Small">Samll</option>
+                        <option value="Small">Small</option>
                         <option value="Medium">Medium</option>
                         <option value="Large">Large</option>
                       </select>
@@ -45,3 +45,5 @@ const MailboxForm = (props) => {
         </main>
     );
 };
+
+export default MailboxForm;
