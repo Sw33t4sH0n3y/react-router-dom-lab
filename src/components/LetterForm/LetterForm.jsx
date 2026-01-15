@@ -16,7 +16,8 @@ const LetterForm = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.addLetter(formData);
+        props.addLetter({...formData, mailboxId: Number(formData.mailboxId)
+    });
         navigate(`/mailboxes/${formData.mailboxId}`);
     };
 
