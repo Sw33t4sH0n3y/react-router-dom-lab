@@ -10,6 +10,7 @@ import LetterForm from './components/LetterForm/LetterForm';
 
 const App = () => {
   const [mailboxes, setMailboxes] = useState([]);
+  const [letters,setLetters] = useState([]);
 
   const addBox = (newMailboxData) => {
     newMailboxData._id = mailboxes.length + 1;
